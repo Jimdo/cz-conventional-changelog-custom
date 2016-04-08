@@ -1,0 +1,22 @@
+{
+  "name": "cz-conventional-changelog-custom",
+  "version": "0.0.0",
+  "description": "commitizen config for custom conventional changelogs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "commitizen",
+    "conventional",
+    "changelog",
+    "custom"
+  ],
+  "author": "Jimdo GmbH",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "2.7.0",
+    "eslint-config-airbnb": "6.2.0",
+    "eslint-plugin-react": "4.3.0"
+  }
+}

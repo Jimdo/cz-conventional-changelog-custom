@@ -10,10 +10,8 @@ module.exports = {
   prompter(inquirer, commit) {
     getChangelogrcConfig()
       .catch(() => changelogrcAngular)
-      .then((config) => {
-        const prompts = getPrompts(config);
-
-        return inquirer.prompt(prompts, (answers) => {
+      .then(config => getPrompts(config)
+        .then(prompts => inquirer.prompt(prompts, answers => {
           const message = formatCommitMsg(answers, config);
 
           if (message) {
@@ -21,8 +19,8 @@ module.exports = {
           }
 
           return log.warn('nothing committed');
-        });
-      })
+        }))
+      )
       .catch(err => log.error(err));
   },
 };
